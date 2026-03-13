@@ -33,7 +33,7 @@ export default function Footer() {
                 alt="Parlance"
                 width={120}
                 height={40}
-                className="h-9 w-auto brightness-0 invert"
+                className="h-20 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
