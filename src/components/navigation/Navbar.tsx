@@ -30,11 +30,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-slate-200 dark:border-slate-800"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
@@ -45,9 +41,7 @@ export default function Navbar() {
               alt="Parlance"
               width={200}
               height={70}
-              className={`h-16 w-auto transition-all duration-300 ${
-                scrolled ? "" : "brightness-0 invert opacity-90"
-              }`}
+              className="h-16 w-auto"
               priority
             />
           </Link>
