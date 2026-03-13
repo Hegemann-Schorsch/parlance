@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "product": "Produkt",
+    "technology": "Technologie",
+    "useCases": "Anwendungsfälle",
+    "team": "Team",
+    "contact": "Kontakt",
+    "requestDemo": "Demo anfragen"
+  },
+  "hero": {
+    "headline": "Fragen Sie Ihre Daten.",
+    "headlineSub": "Erhalten Sie Antworten, denen Sie vertrauen können.",
+    "subline": "Agentic Text-to-SQL für Financial Services. Wir übersetzen natürlichsprachliche Fragen in präzise, SQL-gestützte Antworten — ohne die Struktur Ihrer Daten zu verlieren.",
+    "cta1": "Frühen Zugang anfragen",
+    "cta2": "So funktioniert es",
+    "queryLabel": "Ihre Frage in natürlicher Sprache",
+    "queryPlaceholder": "Wie hoch ist der Anteil unserer Hypotheken mit einem LTV-Verhältnis über 80%?",
+    "stepDecompose": "Frage wird zerlegt...",
+    "stepRetrieve": "Kontext wird abgerufen...",
+    "stepSQL": "SQL wird generiert...",
+    "stepAnswer": "Antwort wird erstellt..."
+  },
+  "problem": {
+    "badge": "Das Problem",
+    "headline": "Klassisches RAG versagt bei Tabellendaten.",
+    "subline": "Die meisten KI-Tools flachen Ihre strukturierten Daten zu unstrukturiertem Text ab. Das zerstört die Zeilen, Spalten und Beziehungen, die Finanzdaten bedeutungsvoll machen.",
+    "example": {
+      "label": "Praxisbeispiel",
+      "question": "\"Wie viel Prozent der Activision-Spiele sind noch aktiv?\"",
+      "ragResult": "RAG antwortet: ~50%",
+      "correctResult": "Richtige Antwort: 20%",
+      "explanation": "RAG linearisiert die Tabelle und verliert den Zeilen-Kontext. Das Modell rät aus Fragmenten."
+    },
+    "ragTitle": "Klassischer RAG-Ansatz",
+    "ragPoints": [
+      "Tabellen werden in flachen Text umgewandelt",
+      "Zeilen-/Spaltenstruktur geht verloren",
+      "LLM approximiert numerische Antworten",
+      "Keine Nachvollziehbarkeit — nur Token-Vorhersage"
+    ],
+    "ourTitle": "Unser Ansatz",
+    "ourPoints": [
+      "Tabellen bleiben als strukturierte Daten in der DB",
+      "Agent schreibt und führt echtes SQL aus",
+      "Exakte Berechnung, keine Approximation",
+      "Jede Antwort ist nachvollziehbar und auditierbar"
+    ]
+  },
+  "solution": {
+    "badge": "So funktioniert es",
+    "headline": "Vier Schritte von der Frage zur Antwort.",
+    "subline": "Unser agentisches Framework kombiniert semantisches Text-Retrieval mit symbolischer SQL-Ausführung — das Beste aus beiden Welten.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Query-Zerlegung",
+        "description": "Das System zerlegt Ihre natürlichsprachliche Frage intelligent in Teilfragen — und erkennt dabei, welche Teile Dokument-Retrieval und welche SQL-Ausführung erfordern.",
+        "tag": "Kontextsensitives Parsing"
+      },
+      {
+        "number": "02",
+        "title": "Text-Retrieval",
+        "description": "Semantische Vektorsuche über Ihre Dokumente mit Reranking für Präzision. Relevante Passagen aus PDFs, Reports und Regulierungsdokumenten werden gefunden und bewertet.",
+        "tag": "Vector Recall + Reranking"
+      },
+      {
+        "number": "03",
+        "title": "SQL-Ausführung",
+        "description": "Der Agent generiert und führt automatisch SQL gegen Ihre relationale Datenbank aus. Exakte Aggregationen, Joins und Berechnungen — keine halluzinierten Zahlen.",
+        "tag": "Symbolische Berechnung"
+      },
+      {
+        "number": "04",
+        "title": "Antwort-Synthese",
+        "description": "SQL-Ergebnisse und Text-Kontext werden kreuzvalidiert und zu einer kohärenten, zitierten Antwort zusammengesetzt. Jede Aussage ist in Daten oder Dokumenten verankert.",
+        "tag": "Kompositionelles Reasoning"
+      }
+    ]
+  },
+  "benchmarks": {
+    "badge": "Benchmarks",
+    "headline": "Bewiesene Genauigkeit. Rigoros gemessen.",
+    "subline": "Unser Ansatz, basierend auf dem TableRAG-Framework, übertrifft NaiveRAG, ReAct und TableGPT2 auf allen wichtigen Hybrid-QA-Benchmarks.",
+    "improvement": "10%+ Verbesserung gegenüber der stärksten Baseline",
+    "paperNote": "Basierend auf begutachteter Forschung",
+    "paperLink": "Auf arXiv ansehen",
+    "tableHeaders": ["Methode", "HeteQA", "HybridQA", "WikiTableQ", "Durchschnitt"],
+    "methods": [
+      { "name": "NaiveRAG", "scores": [41.2, 38.7, 44.1, 41.3], "highlight": false },
+      { "name": "ReAct", "scores": [43.8, 41.2, 46.9, 44.0], "highlight": false },
+      { "name": "TableGPT2", "scores": [45.1, 43.6, 48.2, 45.6], "highlight": false },
+      { "name": "Parlance (TableRAG)", "scores": [54.3, 52.1, 57.8, 54.7], "highlight": true }
+    ],
+    "note": "Werte sind EM (Exact Match) Genauigkeit auf Standard-Evaluierungssets."
+  },
+  "useCases": {
+    "badge": "Anwendungsfälle",
+    "headline": "Gebaut für die Komplexität von Finanzdaten.",
+    "subline": "Von der Kreditanalyse bis zum Regulatory Reporting — überall wo strukturierte und unstrukturierte Daten sich überschneiden, liefern wir Präzision.",
+    "cases": [
+      {
+        "title": "Automatisierte Kreditanalyse",
+        "description": "Verwandeln Sie Jahresabschlüsse in strukturierte Kreditbeurteilungen. Unser Agent liest PDFs, extrahiert KPIs via SQL, führt Berechnungen durch und erstellt einen umfassenden Credit Report.",
+        "exampleQuery": "Wie hoch ist das Debt-to-Equity-Ratio von Gegenpartei X laut Q3-Jahresabschluss?",
+        "tag": "Robo Credit Analyst"
+      },
+      {
+        "title": "Regulatory Reporting",
+        "description": "Gleichzeitige Abfragen über Regulierungsdokumente und Finanzdatenbanken. Präzise Antworten auf Compliance-Fragen mit vollständiger Auditierbarkeit und Quellenreferenz.",
+        "exampleQuery": "Welche Transaktionen in Q3 überstiegen den Schwellenwert aus MiFID II Artikel 26?",
+        "tag": "Compliance & Audit"
+      },
+      {
+        "title": "Portfolio-Analytik",
+        "description": "Stellen Sie natürlichsprachliche Fragen zur Portfolio-Performance, Risikokennzahlen und Allokation — gestützt auf exakte SQL-Berechnungen, nicht auf LLM-Approximationen.",
+        "exampleQuery": "Wie ist die Sharpe Ratio unserer Tech-Allokation vs. Benchmark über die letzten 12 Monate?",
+        "tag": "Risiko & Performance"
+      }
+    ]
+  },
+  "demo": {
+    "badge": "Interaktive Demo",
+    "headline": "Probieren Sie es selbst aus.",
+    "subline": "Sehen Sie, wie eine natürlichsprachliche Frage durch unsere vierstufige Agent-Pipeline fließt.",
+    "placeholder": "Stellen Sie eine Frage zu Ihren Finanzdaten...",
+    "suggestedLabel": "Beispielfragen:",
+    "runButton": "Analysieren",
+    "suggestions": [
+      "Wie hoch ist der Anteil der Kredite mit einem Debt-to-Income-Verhältnis über 40%?",
+      "Vergleichen Sie das Umsatzwachstum unserer Top-5-Kunden über die letzten 3 Quartale",
+      "Welche Gegenparteien überschreiten das Großkreditlimit nach CRR Artikel 395?"
+    ],
+    "steps": [
+      { "label": "Query-Zerlegung", "description": "Wird in Teilfragen aufgeteilt..." },
+      { "label": "Text-Retrieval", "description": "Dokumentkorpus wird durchsucht..." },
+      { "label": "SQL-Generierung", "description": "Query wird erstellt..." },
+      { "label": "Antwort-Synthese", "description": "Ergebnisse werden kreuzvalidiert..." }
+    ]
+  },
+  "team": {
+    "badge": "Team",
+    "headline": "Gebaut von Menschen, die beide Sprachen sprechen — Code und Finance.",
+    "narrative": "Wir haben uns bei Capco, der Capital-Markets-Beratung, kennengelernt. Niklas brachte die Algorithmen, Sebastian die Finance-Expertise. Gemeinsam bauen wir die Brücke zwischen KI und dem echten Finanzwesen.",
+    "founders": [
+      {
+        "initials": "NH",
+        "name": "Niklas Hegemann",
+        "title": "Co-Founder & CTO",
+        "tagline": "Von Quantenalgorithmen zu KI-Agenten",
+        "bio": "Diplom-Physiker mit 8+ Jahren an der Schnittstelle von Algorithmen-Design und Financial Services. Als Co-Founder von JoS QUANTUM entwickelte Niklas Quanten- und KI-Algorithmen für Risikobewertung, Portfolio-Optimierung und Sensitivitätsanalysen. Zuvor bei Capco in Capital Markets Consulting.",
+        "credentials": ["Universität Hamburg (Physik)", "JoS QUANTUM", "Capco", "Wissenschaftlicher Autor"]
+      },
+      {
+        "initials": "SS",
+        "name": "Sebastian Schorsch",
+        "title": "Co-Founder & COO",
+        "tagline": "12+ Jahre Finanzprozesse zum Laufen bringen",
+        "bio": "Wirtschaftswissenschaftler mit tiefer Expertise in Finanzinstrumenten (IFRS 9, HGB), ERP-Systemen (SAP S/4HANA, MS Dynamics) und regulatorischen Anforderungen. Karriere bei KPMG, Capco und als Head of Financial Operations bei PPRO. Kennt die Pain Points von Finance-Teams aus eigener Erfahrung.",
+        "credentials": ["Universität Leipzig (BWL)", "KPMG", "Capco", "PPRO", "IFRS-Spezialist"]
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Loslegen",
+    "headline": "Bereit, Ihre Finanzdaten zu erschließen?",
+    "subline": "Schließen Sie sich Teams an, die bereits präzise Antworten aus komplexen Finanzdaten erhalten.",
+    "option1Title": "Frühen Zugang anfragen",
+    "option1Placeholder": "ihre@email.com",
+    "option1Button": "Warteliste beitreten",
+    "option2Title": "Demo vereinbaren",
+    "option2Button": "Termin buchen",
+    "socialProof": "Basierend auf Forschung. Gebaut in Frankfurt."
+  },
+  "footer": {
+    "tagline": "Agentic Text-to-SQL für Financial Services",
+    "builtIn": "Entwickelt in Frankfurt am Main 🇩🇪",
+    "links": {
+      "product": "Produkt",
+      "technology": "Technologie",
+      "useCases": "Anwendungsfälle",
+      "team": "Team",
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz"
+    },
+    "copyright": "© 2025 Parlance. Alle Rechte vorbehalten."
+  }
+}
