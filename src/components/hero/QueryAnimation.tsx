@@ -80,7 +80,7 @@ export default function QueryAnimation() {
           <div key={step.id} className="flex items-center flex-1">
             <div
               className={`flex items-center gap-1.5 transition-all duration-500 ${
-                i <= phaseIndex ? "opacity-100" : "opacity-30"
+                i <= phaseIndex ? "opacity-100" : "opacity-50"
               }`}
             >
               <div
@@ -92,7 +92,7 @@ export default function QueryAnimation() {
                     : "bg-slate-300"
                 }`}
               />
-              <span className="text-xs font-medium text-slate-500 dark:text-slate-400 hidden sm:block">
+              <span className="text-xs font-medium text-slate-600 hidden sm:block">
                 {step.label}
               </span>
             </div>

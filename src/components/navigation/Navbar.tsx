@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-blue-400 transition-colors"
+                className="text-sm font-medium text-slate-700 hover:text-blue-800 transition-colors"
               >
                 {link.label}
               </a>
@@ -103,7 +103,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-900 dark:hover:text-blue-400 transition-colors"
+                className="block py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-800 transition-colors"
               >
                 {link.label}
               </a>
