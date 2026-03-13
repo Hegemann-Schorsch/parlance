@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, Github, ExternalLink } from "lucide-react";
 
 export default function Footer() {
@@ -26,11 +27,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-mono font-bold text-sm">P</span>
-              </div>
-              <span className="font-bold text-lg text-white">Parlance</span>
+            <div className="flex items-center mb-3">
+              <Image
+                src="/logo.png"
+                alt="Parlance"
+                width={120}
+                height={40}
+                className="h-9 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               {t("tagline")}

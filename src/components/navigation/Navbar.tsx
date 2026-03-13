@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -38,13 +39,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-blue-900 dark:bg-blue-600 flex items-center justify-center">
-              <span className="text-white font-mono font-bold text-sm">P</span>
-            </div>
-            <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">
-              Parlance
-            </span>
+          <Link href={`/${locale}`} className="flex items-center group">
+            <Image
+              src="/logo.png"
+              alt="Parlance"
+              width={120}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
