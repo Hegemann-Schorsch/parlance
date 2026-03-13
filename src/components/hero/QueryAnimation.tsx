@@ -22,30 +22,20 @@ type Phase = "query" | "decompose" | "sql" | "result";
 export default function QueryAnimation() {
   const [phase, setPhase] = useState<Phase>("query");
   const [typedSQL, setTypedSQL] = useState("");
+  const [loopKey, setLoopKey] = useState(0);
 
   useEffect(() => {
-    const sequence: { phase: Phase; delay: number }[] = [
-      { phase: "query", delay: 0 },
-      { phase: "decompose", delay: 2000 },
-      { phase: "sql", delay: 4000 },
-      { phase: "result", delay: 7000 },
-    ];
+    setPhase("query");
+    setTypedSQL("");
 
     const timers: ReturnType<typeof setTimeout>[] = [];
-    sequence.forEach(({ phase, delay }) => {
-      timers.push(setTimeout(() => setPhase(phase), delay));
-    });
-
-    // restart loop
-    timers.push(
-      setTimeout(() => {
-        setPhase("query");
-        setTypedSQL("");
-      }, 10000)
-    );
+    timers.push(setTimeout(() => setPhase("decompose"), 2000));
+    timers.push(setTimeout(() => setPhase("sql"), 4000));
+    timers.push(setTimeout(() => setPhase("result"), 7000));
+    timers.push(setTimeout(() => setLoopKey((k) => k + 1), 10000));
 
     return () => timers.forEach(clearTimeout);
-  }, [phase === "query" && typedSQL === "" ? "reset" : "noop"]);
+  }, [loopKey]);
 
   // SQL typing effect
   useEffect(() => {
