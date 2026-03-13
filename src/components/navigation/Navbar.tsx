@@ -37,15 +37,17 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16 lg:h-18">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center group">
             <Image
               src="/logo.png"
               alt="Parlance"
-              width={120}
-              height={40}
-              className="h-9 w-auto"
+              width={200}
+              height={70}
+              className={`h-16 w-auto transition-all duration-300 ${
+                scrolled ? "" : "brightness-0 invert opacity-90"
+              }`}
               priority
             />
           </Link>
